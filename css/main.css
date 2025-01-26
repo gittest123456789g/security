@@ -659,6 +659,9 @@ top: 11px;
   .log-footer img{
     max-width: 100px;
   }
+  .spiacar{
+    flex-direction: column;
+  }
   .text-under{
     font-size: 13px;
   }
@@ -766,6 +769,9 @@ top: 11px;
   .hoa-footer{
     display: none;
   }
+  .spiacar{
+    flex-direction: column;
+  }
   .img-emp {
     margin: 20px 0;
   }
@@ -828,6 +834,9 @@ top: 11px;
 @media (max-width:992px) {
   .hoa-footer{
     display: none;
+  }
+  .spiacar{
+    flex-direction: column;
   }
   .marquee-content {
     margin: auto;
@@ -892,6 +901,9 @@ top: 11px;
 @media (max-width:1024px) {
   .hoa-footer{
     display: none;
+  }
+  .spiacar{
+    flex-direction: column;
   }
   .img-contact{
     padding: 30px 0;
