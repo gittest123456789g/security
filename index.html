@@ -511,68 +511,52 @@
 </div>
   <div class="form mb-4 m-auto" data-aos="zoom-in" data-aos-delay="100">
     
-  <form action="#">
-    
-
-      <div class="mb-3 flex-grow-1">
-        <label
-          for="formGroupExampleInput"
-          class="form-label text-white"
-          >الاسم</label
-        >
+    <form id="myForm" action="#" novalidate>
+      <div class="mb-3">
+        <label for="name" class="form-label text-white">الاسم</label>
         <input
           type="text"
           class="form-control"
-          id="formGroupExampleInput"
+          id="name"
           required
         />
+        <small class="text-danger" id="nameError"></small>
       </div>
       <div class="mb-3 flex-grow-1">
-        <label
-          for="formGroupExampleInput2"
-          class="form-label text-white"
-          >البريد الالكترونى</label
-        >
+        <label for="phone" class="form-label text-white">رقم الهاتف</label>
         <input
-          type="email"
+          type="tel"
           class="form-control"
-          id="formGroupExampleInput2"
+          id="phone"
+          required
+          pattern="[0-9]{11}"
+        />
+        <small class="text-danger" id="phoneError"></small>
+      </div>
+      <div class="mb-3">
+        <label for="subject" class="form-label text-white">الموضوع</label>
+        <input
+          type="text"
+          class="form-control"
+          id="subject"
           required
         />
-    </div>
-    <div class="mb-3">
-      <label
-        for="formGroupExampleInput2"
-        class="form-label text-white"
-        >الموضوع</label
-      >
-      <input
-        type="text"
-        class="form-control"
-        id="formGroupExampleInput2"
-        required
-      />
-    </div>
-    <div class="mb-3">
-      <label for="floatingTextarea2" class="form-label text-white"
-        >رسالة</label
-      >
-  
-      <textarea
-        class="form-control"
-       
-        id="floatingTextarea2"
-        style="height: 100px"
-      ></textarea>
-    </div>
-    <div class="mb-3 d-flex justify-content-center">
-      <div class="btn-1 mt-5">
-        <a href="#" class="text-white text-decoration-none fs-5"
-          >ارسال</a
-        >
+        <small class="text-danger" id="subjectError"></small>
       </div>
-    </div>
-  </form>
+      <div class="mb-3">
+        <label for="message" class="form-label text-white">رسالة</label>
+        <textarea
+          class="form-control"
+          id="message"
+          style="height: 100px"
+          required
+        ></textarea>
+        <small class="text-danger" id="messageError"></small>
+      </div>
+      <div class="mb-3 d-flex justify-content-center">
+        <button type="submit" class="btn-1 border-0 text-white fw-bold mt-5">ارسال</button>
+      </div>
+    </form>
   </div>
 </div>
   

@@ -31,3 +31,53 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   /////aos////////
+  //vailform////
+  document.getElementById("myForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Clear previous error messages
+    document.getElementById("nameError").textContent = "";
+    document.getElementById("phoneError").textContent = "";
+    document.getElementById("subjectError").textContent = "";
+    document.getElementById("messageError").textContent = "";
+
+    // Get form values
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    let isValid = true;
+
+    // Validate name
+    if (name === "") {
+      document.getElementById("nameError").textContent = "الاسم مطلوب.";
+      isValid = false;
+    }
+
+    // Validate phone (11 digits)
+    if (!/^\d{11}$/.test(phone)) {
+      document.getElementById("phoneError").textContent =
+        "رقم الهاتف يجب أن يحتوي على 11 رقمًا.";
+      isValid = false;
+    }
+
+    // Validate subject
+    if (subject === "") {
+      document.getElementById("subjectError").textContent = "الموضوع مطلوب.";
+      isValid = false;
+    }
+
+    // Validate message
+    if (message === "") {
+      document.getElementById("messageError").textContent = "الرسالة مطلوبة.";
+      isValid = false;
+    }
+
+    // Submit form if valid
+    if (isValid) {
+      alert("تم إرسال النموذج بنجاح!");
+      this.submit();
+    }
+  });
+    //vailform////
